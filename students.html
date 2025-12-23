@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students | Student Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Students</div>
+  <ul class="nav-links">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="#" onclick="logout()">Logout</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h2>Add Student</h2>
+
+  <input id="sname" placeholder="Student Name"><br><br>
+  <input id="sclass" placeholder="Class"><br><br>
+  <input id="sroll" placeholder="Roll Number"><br><br>
+
+  <button class="btn" onclick="addStudent()">Add Student</button>
+</section>
+
+<section style="padding:40px">
+  <h2>Student List</h2>
+
+  <table border="1" width="100%" style="background:white">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Roll</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+</section>
+
+<script src="js/app.js"></script>
+<h2>Student Portal</h2>
+<p>Total Students: <span id="studentCount">0</span></p>
+
+<input type="text" id="studentName" placeholder="Enter Name">
+<input type="number" id="studentAge" placeholder="Enter Age">
+<button onclick="addStudent()">Add Student</button>
+
+<table border="1">
+    <thead>
+        <tr><th>#</th><th>Name</th><th>Age</th></tr>
+    </thead>
+    <tbody id="studentTable">
+    </tbody>
+</table>
+
+</body>
+</html>
